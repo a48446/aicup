@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 csv_name = "train"
-data_set = pd.read_csv("data/{}.csv".format(csv_name))
+data_set = pd.read_csv("init_data/{}.csv".format(csv_name))
 data = data_set.copy()
 times = 0
 range_1 = 1
@@ -33,4 +33,4 @@ new_data = pd.DataFrame({   'filename':pd.Series(filename),
                             "category":pd.Series(labelname),
                             })
 new_data.info()
-new_data.to_csv('data/val.csv')
+new_data.to_csv('init_data/val.csv')
